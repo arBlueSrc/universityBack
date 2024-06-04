@@ -2,28 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Answer;
 use App\Models\Employee;
 use App\Models\Lend;
 use App\Models\Part;
 use App\Models\Product;
 use App\Models\ProductProperty;
 use App\Models\Store;
+use App\Models\UserAnswer;
 use App\MyClass\GorGianToJalai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
-class EmployeeController extends Controller
+class AnswerController extends Controller
 {
     public function index()
     {
-        $employees = Employee::paginate(10);
-        return view('admin.employee.index', compact('employees'));
+        $userAnswer = UserAnswer::paginate(10);
+        return view('admin.answer.index', compact('userAnswer'));
     }
 
     public function create()
     {
         $parts = Part::get();
-        return view('admin.employee.create', compact('parts'));
+        return view('admin.answer.create', compact('parts'));
     }
 
     public function store(Request $request)
@@ -42,7 +44,7 @@ class EmployeeController extends Controller
         ]);
 
         $employees = Employee::paginate(10);
-        return view('admin.employee.index', compact('employees'));
+        return view('admin.answer.index', compact('employees'));
 
     }
 
@@ -52,7 +54,7 @@ class EmployeeController extends Controller
         $employee = Employee::where('id', $id)->first();
         $parts = Part::get();
 
-        return view('admin.employee.edit', compact('employee', 'parts'));
+        return view('admin.answer.edit', compact('employee', 'parts'));
     }
 
     public function destroy($id)
@@ -60,7 +62,7 @@ class EmployeeController extends Controller
         Employee::where('id', $id)->delete();
 
         $employees = Employee::paginate(10);
-        return view('admin.employee.index', compact('employees'));
+        return view('admin.answer.index', compact('employees'));
     }
 
     public function update(Request $request, $id)
@@ -78,7 +80,7 @@ class EmployeeController extends Controller
         ]);
 
         $employees = Employee::paginate(10);
-        return view('admin.employee.index', compact('employees'));
+        return view('admin.answer.index', compact('employees'));
     }
 
     public function qrcode($user_id)
@@ -100,7 +102,7 @@ class EmployeeController extends Controller
         $en_id = openssl_encrypt($user_id, "aes-128-cbc",
             $encryption_key, $options, $encryption_iv);
 
-        return view('admin.employee.qrcode', compact('en_id', 'username'));
+        return view('admin.answer.qrcode', compact('en_id', 'username'));
     }
 
 
@@ -129,7 +131,7 @@ class EmployeeController extends Controller
             $users[$key]->en_id = $en_id;
         }
 
-        return view('admin.employee.allqrcode', compact('users'));
+        return view('admin.answer.allqrcode', compact('users'));
 
     }
 
@@ -138,7 +140,7 @@ class EmployeeController extends Controller
 
         $user_id = $id;
 
-        //get employee data
+        //get answer data
         $employee = Employee::find($user_id);
         $user = new \stdClass();
         $user->id = $employee->id;
@@ -198,7 +200,7 @@ class EmployeeController extends Controller
             $products[$i]->good->name = Crypt::decrypt($products[$i]->good->name);
         }
 
-        return view('admin.employee.show', compact('user', 'products'));
+        return view('admin.answer.show', compact('user', 'products'));
     }
 
     public function invoicePrint(Request $request)
@@ -212,7 +214,7 @@ class EmployeeController extends Controller
 
         $user_id = $request->input('id');
 
-        //get employee data
+        //get answer data
         $employee = Employee::find($user_id);
         $user = new \stdClass();
         $user->name = Crypt::decrypt($employee->name);
@@ -275,7 +277,7 @@ class EmployeeController extends Controller
         date_default_timezone_set('Asia/Tehran');
         $current_time = date('h:i:s');
 
-        return view('admin.employee.invoice-print', compact('shamsi_date', 'user', 'products', 'current_time'));
+        return view('admin.answer.invoice-print', compact('shamsi_date', 'user', 'products', 'current_time'));
     }
 
     public function allInvoice(Request $request)
@@ -286,7 +288,7 @@ class EmployeeController extends Controller
         $shamsi_date = $shamsi_date[0] . "/" . $shamsi_date[1] . "/" . $shamsi_date[2];
 
 
-        //get employee data
+        //get answer data
         $employees = Employee::get();
 
         $profiles = array();
@@ -359,7 +361,7 @@ class EmployeeController extends Controller
         $current_time = date('h:i:s');
 
 
-        return view('admin.employee.all-invoice-print', compact('shamsi_date',  'current_time','profiles_products','profiles'));
+        return view('admin.answer.all-invoice-print', compact('shamsi_date',  'current_time','profiles_products','profiles'));
     }
 
 }

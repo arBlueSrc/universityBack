@@ -12,4 +12,9 @@ class UserAnswer extends Model
     protected $table = "user_answer";
 
     protected $fillable = ['name', 'job', 'phone'];
+
+    public function answer()
+    {
+        return $this->hasMany(Answer::class, "user_id");
+    }
 }

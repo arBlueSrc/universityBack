@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_answer_model', function (Blueprint $table) {
+        Schema::create('user_answer', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
             $table->string('job')->nullable();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_answer_model');
+        Schema::dropIfExists('user_answer');
     }
 };

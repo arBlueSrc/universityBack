@@ -18,7 +18,7 @@
                     data-accordion="false">
 
                     <li class="nav-item">
-                        <a href="{{ route('employee.index') }}" class="nav-link {{ isActive('employee.index') }}">
+                        <a href="{{ route('userAnswer.index') }}" class="nav-link {{ isActive('userAnswer.index') }}">
                             <i class="fa fa-circle-o nav-icon"></i>
                             <p>لیست اطلاعات ثبت شده</p>
                         </a>

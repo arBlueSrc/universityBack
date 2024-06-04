@@ -18,6 +18,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     })->name('admin');
 
     // staff
-    Route::resource('employee', 'App\Http\Controllers\EmployeeController');
+    Route::resource('userAnswer', 'App\Http\Controllers\AnswerController');
 
 });

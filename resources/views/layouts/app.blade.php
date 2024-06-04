@@ -25,10 +25,6 @@
                 جمع آوری اطلاعات Q
             </a>
 
-            <select class="changeLang" id="changeLang" onchange="changeLang();">
-                <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                <option value="fa" {{ session()->get('locale') == 'fa' ? 'selected' : '' }}>فارسی</option>
-            </select>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -91,15 +87,6 @@
 </body>
 
 
-<script type="text/javascript">
-
-    var url = "{{ route('changeLang') }}";
-
-    function changeLang() {
-        var selectedLang = document.getElementById("changeLang");
-        window.location.href = url + "?lang="+ selectedLang.options[selectedLang.selectedIndex].value;
-    }
-</script>
 
 </html>
 

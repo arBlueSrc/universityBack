@@ -9,4 +9,9 @@ class Answer extends Model
 {
     use HasFactory;
     protected $fillable = ['question', 'rate','user_id'];
+
+//    public function userAnswer()
+//    {
+//        return $this->belongsTo(UserAnswer::class);
+//    }
 }
