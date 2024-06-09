@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Answer;
 use App\Models\Employee;
 use App\Models\Good;
 use App\Models\GoodProperty;
@@ -19,14 +20,30 @@ use Illuminate\Support\Facades\URL;
 
 class ApiController extends Controller
 {
-    public function login(Request $request)
+    public function registerForm(Request $request)
     {
 
+        $user = UserAnswer::create([
+            "name" => $request->name,
+            "job" => $request->job,
+            "phone" => $request->phone,
+        ]);
 
+        for ($i = 1; $i < 33; $i++){
+
+            if ($request->$i != "-1"){
+                Answer::create([
+                    "question" => $i,
+                    "rate" => $request->$i,
+                    "user_id" => $user->id
+                ]);
+            }
+
+        }
 
         return response()->json([
-            'status' => false,
-            'result' => "username is wrong.",
+            'status' => true,
+            'result' => "form submit successfully",
         ], 200);
 
     }
