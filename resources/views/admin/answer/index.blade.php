@@ -120,9 +120,9 @@
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
-                {{ $userAnswer->appends(['search' => request('search')])->render() }}
-            </div>
+{{--            <div class="card-footer">--}}
+{{--                {{ $userAnswer->appends(['search' => request('search')])->render() }}--}}
+{{--            </div>--}}
         </div>
         <!-- /.card -->
 
