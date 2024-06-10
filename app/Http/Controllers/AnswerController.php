@@ -18,7 +18,7 @@ class AnswerController extends Controller
 {
     public function index()
     {
-        $userAnswer = UserAnswer::get(3);
+        $userAnswer = UserAnswer::offsetGet(3);
         dd($userAnswer->answer);
         return view('admin.answer.index', compact('userAnswer'));
     }
