@@ -18,9 +18,8 @@ class AnswerController extends Controller
 {
     public function index()
     {
-        $userAnswer = UserAnswer::all();
-
-        dd($userAnswer);
+        $userAnswer = UserAnswer::first();
+        dd($userAnswer->rate);
         return view('admin.answer.index', compact('userAnswer'));
     }
 
