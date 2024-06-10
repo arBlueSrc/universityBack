@@ -19,6 +19,8 @@ class AnswerController extends Controller
     public function index()
     {
         $userAnswer = UserAnswer::all();
+
+        dd($userAnswer);
         return view('admin.answer.index', compact('userAnswer'));
     }
 

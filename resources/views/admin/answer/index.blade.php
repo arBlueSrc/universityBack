@@ -110,7 +110,6 @@
                             <td>{{ $item->answer["30"]->rate  ?? "" }}</td>
                             <td>{{ $item->answer["31"]->rate  ?? "" }}</td>
                             <td>{{ $item->answer["32"]->rate ?? ""  }}</td>
-
                         </tr>
                     @endforeach
 
