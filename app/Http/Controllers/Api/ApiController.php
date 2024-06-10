@@ -31,7 +31,7 @@ class ApiController extends Controller
 
         for ($i = 1; $i < 33; $i++){
 
-            if ($request->$i != "-1"){
+            if ($request->$i != "-100"){
                 Answer::create([
                     "question" => $i,
                     "rate" => $request->$i,
