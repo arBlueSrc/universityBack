@@ -78,38 +78,39 @@
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->job }}</td>
                             <td>{{ $item->phone }}</td>
-                            <td>{{ $item->answer[0]->rate ?? "" }}</td>
-                            <td>{{ $item->answer[1]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[2]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[3]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[4]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[5]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[6]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[7]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[8]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[9]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[10]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[11]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[12]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[13]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[14]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[15]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[16]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[17]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[18]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[19]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[20]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[21]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[22]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[23]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[24]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[25]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[26]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[27]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[28]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[29]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[30]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer[31]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["1"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["2"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["3"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["4"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["5"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["6"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["7"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["8"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["9"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["10"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["11"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["12"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["13"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["14"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["15"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["16"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["17"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["18"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["19"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["20"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["21"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["22"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["23"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["24"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["25"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["26"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["27"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["28"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["29"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["30"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["31"]->rate  ?? "" }}</td>
+                            <td>{{ $item->answer["32"]->rate ?? ""  }}</td>
+
                         </tr>
                     @endforeach
 

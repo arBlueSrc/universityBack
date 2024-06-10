@@ -18,7 +18,7 @@ class AnswerController extends Controller
 {
     public function index()
     {
-        $userAnswer = UserAnswer::paginate(10);
+        $userAnswer = UserAnswer::all();
         return view('admin.answer.index', compact('userAnswer'));
     }
 
