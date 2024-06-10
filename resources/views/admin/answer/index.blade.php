@@ -78,38 +78,38 @@
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->job }}</td>
                             <td>{{ $item->phone }}</td>
-                            <td>{{ $item->answer["1"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["2"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["3"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["4"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["5"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["6"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["7"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["8"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["9"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["10"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["11"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["12"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["13"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["14"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["15"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["16"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["17"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["18"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["19"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["20"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["21"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["22"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["23"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["24"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["25"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["26"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["27"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["28"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["29"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["30"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["31"]->rate  ?? "" }}</td>
-                            <td>{{ $item->answer["32"]->rate ?? ""  }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 1)->where('user_id',$item->id)->first()->rate ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 2)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 3)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 4)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 5)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 6)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 7)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 8)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 9)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 10)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 11)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 12)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 13)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 14)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 15)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 16)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 17)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 18)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 19)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 20)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 21)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 22)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 23)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 24)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 25)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 26)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 27)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 28)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 29)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 30)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 31)->where('user_id',$item->id)->first()->rate  ?? "" }}</td>
+                            <td>{{ \App\Models\Answer::where('question', 32)->where('user_id',$item->id)->first()->rate ?? ""  }}</td>
                         </tr>
                     @endforeach
 
