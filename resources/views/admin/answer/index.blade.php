@@ -7,6 +7,9 @@
             {{ session()->get('message') }}
         </div>
     @endif
+
+    <script type="text/javascript" src="{{ asset('dist/js/tableToExcel.js') }}"></script>
+
     <div class="row">
         <div class="col-12">
 
@@ -17,12 +20,18 @@
                     <div class="d-flex justify-content-between">
                         <h3 class="card-title">لیست پرسشنامه ها</h3>
 
-{{--                        <div class="row">--}}
+                        <div class="row">
 
-{{--                            <a href="{{ route('allInvoice') }}" class="btn btn-sm btn-success ml-1">چاپ لیست--}}
-{{--                                اموال همه ی پرسنل</a>--}}
+                            <a onclick="clicked()" class="btn btn-sm btn-success ml-1">خروجی اکسل</a>
 
-{{--                        </div>--}}
+                            <script>
+                                function clicked(){
+                                    TableToExcel.convert(document.getElementById("table1"));
+                                }
+                            </script>
+
+
+                        </div>
 
                     </div>
 
@@ -30,9 +39,10 @@
 
             </div>
 
+
             <!-- /.card-header -->
             <div class="card-body table-bordered table-responsive p-0">
-                <table class="table table-hover">
+                <table class="table table-hover" id="table1">
                     <tbody>
                     <tr>
                         <th>ردیف</th>

@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Answer;
-use App\Models\Employee;
-use App\Models\Lend;
-use App\Models\Part;
-use App\Models\Product;
-use App\Models\ProductProperty;
-use App\Models\Store;
 use App\Models\UserAnswer;
 use App\MyClass\GorGianToJalai;
+use App\MyClass\InvoicesExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AnswerController extends Controller
 {
@@ -362,6 +359,13 @@ class AnswerController extends Controller
 
 
         return view('admin.answer.all-invoice-print', compact('shamsi_date',  'current_time','profiles_products','profiles'));
+    }
+
+
+
+    public function export()
+    {
+        return Excel::download(new InvoicesExport, 'users.xlsx');
     }
 
 }
